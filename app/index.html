@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Slyd</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="">
+
+    <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/plugins/line-numbers/prism-line-numbers.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="//unpkg.com/prism-themes@1.1.0/themes/prism-atom-dark.css" as="style" onload="this.rel='stylesheet'">
+    
+    <link rel="stylesheet" href="bundle.css">
+
+    <script src="bundle.js" type="module" async></script>
+  </head>
+  <body>
+    <main>
+
+      <slyds>
+
+        <slyd>
+          <div v-list>
+            <h1>slyd</h1>
+            <h2>a minimalist's slide deck</h2>
+          </div>
+        </slyd>
+
+        <slyd id="slyd-1b">
+          <div v-list>
+            <h3>bi-directional CSS parallax</h3>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <slyds>
+
+        <slyd id="slyd-2a">
+          <div v-list>
+            <div text-left>
+              <small>comes with</small>
+              <h1>components</h1>
+            </div>
+          </div>
+        </slyd>
+
+        <slyd id="slyd-2b">
+          <div v-list>
+            <h3>Syntax Highlighting</h3>
+            <br>
+            <pre class="language-js line-numbers show-language"><code>
+              document.querySelectorAll('.🤓')
+                .forEach(({style}) => 
+                  Object.assign(style, {
+                    backgroundColor: 'hsl(200 100% 90%)',
+                    color: 'hsl(200 82% 15%)',
+                    borderRadius: '1rem',
+                    padding: '.5rem 1rem',
+                  }))
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="slyd-2c">
+          <div v-list>
+            <div h-list text-left>
+              <h3>Links:</h3>
+              <div>
+                <a href="#">link preview</a>
+                <a href="#">link preview</a>
+              </div>
+            </div>
+            <hr>
+            <div h-list text-left>
+              <h3>Buttons:</h3>
+              <div h-list>
+                <button class="button">Primary</button>
+                <button class="button button-secondary">Secondary</button>
+                <button class="button button-ghost">Ghost</button>
+                <button class="button button-link">Link</button>
+              </div>
+            </div>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <slyds>
+
+        <slyd id="slyd-3a">
+          <div v-list>
+            <div text-left>
+              <small>performantly</small>
+              <h1>embed images</h1>
+            </div>
+          </div>
+        </slyd>
+
+        <slyd id="slyd-3b" style="--image: url(./images/starwars.png); --darkness: 50%;">
+          <div v-list>
+            <h3>Background Images</h3>
+            <br>
+            <button class="button">Watch Preview</button>
+          </div>
+        </slyd>
+
+        <slyd id="slyd-3c" style="--image: url(./images/starwars.png); --darkness: 90%;">
+          <div v-list>
+            <h3>Control Darkness</h3>
+            <br>
+            <button class="button"><code>var(--darkness)</code></button>
+          </div>
+        </slyd>
+
+        <slyd id="slyd-3d">
+          <div h-list text-left>
+            <h3>Foreground Images</h3>
+            <picture cover>
+              <img src="./images/aliens.png" alt="">
+            </picture>
+          </div>
+        </slyd>
+
+      </slyds>
+
+    </main>
+  </body>
+</html>

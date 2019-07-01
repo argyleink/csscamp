@@ -1,0 +1,70 @@
+.button {
+  --button-theme: var(--hue);
+
+  --bg: hsl(var(--button-theme) 50% 75%);
+  --bg-hover: hsl(var(--button-theme) 50% 80%);
+  --text: hsl(var(--button-theme) 60% 15%);
+
+  height: 2.5em;
+  cursor: pointer;
+  display: inline-grid;
+  position: relative;
+  gap: .5em;
+  grid-auto-flow: columns;
+  padding: 0 1.25em;
+  margin: 0;
+  border: none;
+  border-radius: 3rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 2px solid transparent;
+  line-height: 1.4;
+
+  transition: background-color .3s ease;
+  
+  --fluid-type-min-size: .75;
+  --fluid-type-max-size: 1.5;
+  --fluid-type-min-screen: 20;
+  --fluid-type-max-screen: 88;
+
+  font-size: calc(
+    (var(--fluid-type-min-size) * 1rem) + (var(--fluid-type-max-size) - var(--fluid-type-min-size)) * (100vw - (var(--fluid-type-min-screen) * 1rem)) /
+      (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
+  );
+
+  &:hover {
+    background: var(--bg-hover);
+  }
+
+  &:active {
+    top: 2px;
+  }
+
+  &:focus:not(:focus-visible) { 
+    outline: none;
+  }
+
+  &.button-secondary {
+    --button-theme: calc(var(--hue) * 1.5);
+    /* --bg: var(--brand-color-2);
+    --bg-hover: hsl(calc(var(--hue) * 1.5) 85% 60%);
+    --text: hsl(calc(var(--hue) * 1.5) 60% 25%); */
+  }
+
+  &.button-ghost {
+    --bg: transparent;
+    --bg-hover: hsla(var(--hue), 80%, 40%, 10%);
+    --text: var(--brand-color-1);
+    border: 2px solid var(--brand-color-1);
+  }
+
+  &.button-link {
+    --bg: transparent;
+    --bg-hover: transparent;
+    --text: var(--brand-color-2);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
