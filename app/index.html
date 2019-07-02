@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Slyd</title>
+    <title>CSScamp 2019 :: Adam Argyle</title>
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#111111">
+    <meta name="theme-color" content="#111212">
     <meta name="description" content="">
 
     <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/plugins/line-numbers/prism-line-numbers.min.css" as="style" onload="this.rel='stylesheet'">
@@ -21,24 +21,31 @@
 
       <slyds>
 
-        <slyd>
+        <slyd id="beginning">
           <div v-list>
             <h1>Too Fast</h1>
             <h2>Reducing UX anxiety <br> by adding time to user interaction</h2>
           </div>
         </slyd>
 
-        <slyd id="slyd-1b">
+        <slyd id="introduction">
           <div v-list>
-            <h1>Pull Over</h1>
-            <h2>dat app's too fast</h2>
+            <h2>Pull Over</h2>
+            <h3>dat app's too fast</h3>
           </div>
         </slyd>
 
-        <slyd id="slyd-1c">
+        <slyd id="quantum-speed">
           <div v-list>
             <h2>Quantum's on the horizon</h2>
             <h3>potentially 0 latency</h3>
+          </div>
+        </slyd>
+
+        <slyd id="slow-for-now">
+          <div v-list text-left>
+            <h1>Slow still</h1>
+            <h3>for now...</h3>
           </div>
         </slyd>
 
@@ -46,16 +53,86 @@
 
       <slyds>
 
-        <slyd id="slyd-2a">
+        <slyd id="earth-ux">
           <div v-list>
-            <div text-left>
-              <small>comes with</small>
-              <h1>components</h1>
-            </div>
+            <h1>Earth Life UX</h1>
+            <h3>Where you spend most your day</h3>
           </div>
         </slyd>
 
-        <slyd id="slyd-2b">
+        <slyd id="sharp">
+          <div v-list>
+            <h2>Physically Sharp</h2>
+          </div>
+        </slyd>
+
+        <slyd id="soft">
+          <div v-list>
+            <h2>Physically Soft</h2>
+          </div>
+        </slyd>
+
+        <slyd id="heavy">
+          <div v-list>
+            <h2>Physically Heavy</h2>
+          </div>
+        </slyd>
+
+        <slyd id="light">
+          <div v-list>
+            <h2>Physically Light</h2>
+          </div>
+        </slyd>
+
+        <slyd id="sharp-audio">
+          <div v-list>
+            <h2>Audibally Sharp</h2>
+          </div>
+        </slyd>
+
+        <slyd id="soft-audio">
+          <div v-list>
+            <h2>Audibally Soft</h2>
+          </div>
+        </slyd>
+
+        <slyd id="sharp-gaming">
+          <div v-list>
+            <h2>Sharp Gaming</h2>
+          </div>
+        </slyd>
+
+        <slyd id="soft-gaming">
+          <div v-list>
+            <h2>Soft Gaming</h2>
+          </div>
+        </slyd>
+
+        <slyd id="phyical-to-digital-transition">
+          <div v-list text-left>
+            <h3>We get it.</h3>
+          </div>
+        </slyd>
+
+        <slyd id="dichotomies">
+          <div v-list>
+            <h2>Tangibally & Audibally</h2>
+            <br>
+            <h3>Sharp <b>vs</b> Soft</h3>
+            <h3>Heavy <b>vs</b> Light</h3>
+          </div>
+        </slyd>
+
+        <slyd id="connected-worlds">
+          <div v-list>
+            <h3>Physical <b>&</b> Digital</h3>
+            <h3>Body <b>&</b> Mind</h3>
+            <br>
+            <h2>Connected</h2>
+          </div>
+        </slyd>
+
+        <!-- <slyd id="slyd-2b">
           <div v-list>
             <h3>Syntax Highlighting</h3>
             <br>
@@ -70,65 +147,32 @@
                   }))
             </code></pre>
           </div>
-        </slyd>
-
-        <slyd id="slyd-2c">
-          <div v-list>
-            <div h-list text-left>
-              <h3>Links:</h3>
-              <div>
-                <a href="#">link preview</a>
-                <a href="#">link preview</a>
-              </div>
-            </div>
-            <hr>
-            <div h-list text-left>
-              <h3>Buttons:</h3>
-              <div h-list>
-                <button class="button">Primary</button>
-                <button class="button button-secondary">Secondary</button>
-                <button class="button button-ghost">Ghost</button>
-                <button class="button button-link">Link</button>
-              </div>
-            </div>
-          </div>
-        </slyd>
+        </slyd> -->
 
       </slyds>
 
       <slyds>
 
-        <slyd id="slyd-3a">
-          <div v-list>
-            <div text-left>
-              <small>performantly</small>
-              <h1>embed images</h1>
-            </div>
+        <slyd id="todays-fast-apps">
+          <div v-list text-left>
+            <h1>Fast Apps</h1>
+            <h3>in 2019</h3>
           </div>
         </slyd>
 
-        <slyd id="slyd-3b" style="--image: url(./images/starwars.png); --darkness: 50%;">
+        <slyd id="fast-apps-gif">
           <div v-list>
-            <h3>Background Images</h3>
-            <br>
-            <button class="button">Watch Preview</button>
-          </div>
-        </slyd>
-
-        <slyd id="slyd-3c" style="--image: url(./images/starwars.png); --darkness: 90%;">
-          <div v-list>
-            <h3>Control Darkness</h3>
-            <br>
-            <button class="button"><code>var(--darkness)</code></button>
-          </div>
-        </slyd>
-
-        <slyd id="slyd-3d">
-          <div h-list text-left>
-            <h3>Foreground Images</h3>
             <picture cover>
-              <img src="./images/aliens.png" alt="">
+              <img loading="lazy" src="https://media2.giphy.com/media/l0HlQXlQ3nHyLMvte/giphy.gif?cid=790b76115d1ad277436851795945673b&rid=giphy.gif" alt="">
             </picture>
+          </div>
+        </slyd>
+
+        <slyd id="fast-app-descriptors">
+          <div v-list>
+            <h2>Snappy</h2>
+            <h2>Instant</h2>
+            <h2>Elastic</h2>
           </div>
         </slyd>
 
