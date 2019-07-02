@@ -1,7 +1,0 @@
-body {
-  margin: 0;
-  background: var(--surface-1);
-  color: var(--text-color-1);
-  font-family: system-ui;
-  overflow: hidden;
-}

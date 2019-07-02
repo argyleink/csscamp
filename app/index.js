@@ -1,1 +1,1 @@
-import './slyd/'
+import 'https://slyd.netlify.com/bundle.js'

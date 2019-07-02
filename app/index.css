@@ -1,15 +1,2 @@
-@import './components/_vars.css';
+@import 'https://slyd.netlify.com/bundle.css';
 
-@import './components/body.css';
-@import './components/typography.css';
-
-@import './components/layouts.css';
-@import './components/main.css';
-@import './components/slyds.css';
-@import './components/slyd.css';
-@import './components/depth.css';
-
-@import './components/button.css';
-@import './components/dividers.css';
-@import './components/picture.css';
-@import './components/prism.css';
