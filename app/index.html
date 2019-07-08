@@ -8,6 +8,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#111212">
     <meta name="description" content="">
+    <link rel="manifest" href="manifest.json">
 
     <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/plugins/line-numbers/prism-line-numbers.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="//unpkg.com/prism-themes@1.1.0/themes/prism-atom-dark.css" as="style" onload="this.rel='stylesheet'">
@@ -21,17 +22,33 @@
 
         <slyd id="beginning">
           <div v-list>
-            <h1 bold>Too Fast</h1>
-            <h2>Reducing UX anxiety <br> by adding time to user interaction</h2>
-            <h3 class="brand_color-1">Add time to gain trust</h3>
+            <h1>It's Too Fast</h1>
+            <!-- <h3>Increase UX & <span highlight>reduce user anxiety</span> by<br>
+              <span highlight>adding time</span> to user interaction
+            </h3> -->
+            <h3>Increase UX <span highlight>adding time</span></h3>
+            <!-- <h3 class="brand_color-1">Add time to gain trust</h3> -->
           </div>
         </slyd>
 
-        <slyd id="introduction">
+        <slyd id="goal">
+          <div v-list>
+            <h2 uppercase serif class="brand_color-1">Quest</h2>
+            <p lead text-left>Compel a speed addicted community to replace techniques that create anxiety with techniques that relieve anxiety.</p>
+            <p>
+              <small>AKA</small>
+              <br>
+              (advocate pace over speed)
+            </p>
+          </div>
+        </slyd>
+
+        <slyd id="problem-statement" two-up-video-right>
           <div v-list>
             <h2>Pull Over</h2>
             <h3>dat app's too fast</h3>
           </div>
+          <video fit-height src="./videos/dont-instant_jank.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="quantum-speed">
@@ -364,6 +381,7 @@
         <slyd id="time-is-money">
           <div v-list>
             <h2>Time <b>is</b> Money</h2>
+            <h3>Buy time with distraction</h3>
           </div>
         </slyd>
 
@@ -390,6 +408,8 @@
             <ul>
               <li>Intel Comic Director</li>
               <li>Conde Naste</li>
+              <li>Eye Scanner</li>
+              <li>QR Code Scanner</li>
             </ul>
           </div>
         </slyd>
@@ -682,6 +702,81 @@
             <pre class="language-js line-numbers show-language"><code>
               // transitions are interruptible by default
             </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="tactic-more-time-stronger-ease">
+          <div v-list>
+            <h2>Increase Duration</h2>
+            <h3>with stronger easing</h3>
+          </div>
+        </slyd>
+
+        <slyd id="tactic-more-time-stronger-ease-snippet">
+          <div v-list>
+            <pre class="language-js line-numbers show-language"><code>
+              // side by side
+              // one has 200ms duration with regular ease
+              // one has 500ms duration with stronger ease
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="tactic-area-context">
+          <div v-list>
+            <h2>Duration += Distance</h2>
+            <h3>short distance :: short duration</h3>
+          </div>
+        </slyd>
+
+        <slyd id="tactic-area-context-snippet">
+          <div v-list>
+            <pre class="language-js line-numbers show-language"><code>
+              // small
+              // medium
+              // large
+            </code></pre>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <slyds>
+
+        <slyd id="strategies-recap">
+          <div v-list>
+            <ol>
+              <li>Designs need white space<br>UX needs time</li>
+              <li>Designs need to guide<br>UX needs to follow</li>
+              <li>Designs need to speak<br>UX needs to listen</li>
+              <li>Designs need to report<br>UX needs to manage</li>
+              <li>Designs describe mass<br>UX needs to control mass</li>
+            </ol>
+          </div>
+        </slyd>
+
+        <slyd id="tactics-recap">
+          <div v-list>
+            <ol>
+              <li>UI Feedback</li>
+              <li>Forgiving hit areas</li>
+              <li>Faster in than out</li>
+              <li>Be interruptible</li>
+              <li>Increase duration and strengthen easing</li>
+              <li>Duration += Distance</li>
+            </ol>
+          </div>
+        </slyd>
+
+        <!-- <slyd id="experiment">
+          <div v-list>
+            <h1>Slow down the UI around you, see what the 1-2 seconds slow does to you</h1>
+          </div>
+        </slyd> -->
+
+        <slyd id="end">
+          <div v-list>
+            <h1>Thank You</h1>
           </div>
         </slyd>
 

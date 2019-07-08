@@ -13,3 +13,21 @@
   color: var(--text-color-2);
   border: 1px solid var(--text-color-3);
 }
+
+video {
+  &:focus:not(:focus-visible) { 
+    outline: none;
+  }
+  
+  &[fit-height] {
+    height: 100%;
+  }
+}
+
+[two-up-video-right] {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 100vh;
+  gap: 3vmax;
+}
