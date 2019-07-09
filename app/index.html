@@ -293,7 +293,7 @@
           <div v-list style="padding-left:20vw;padding-right:20vw;">
             <h2 class="text_color-1">We <b>project</b> our physical world <b>into our digital world</b></h2>
             <hr>
-            <h2 class="brand_color-1">Lower anxiety with <b>softness</b>, <b>lightness</b> & <b>orchestration</b></h2>
+            <h2 class="text_color-1">Lower anxiety with <b>softness</b>, <b>lightness</b> & <b>orchestration</b></h2>
           </div>
         </slyd>
 
@@ -316,34 +316,43 @@
           </div>
         </slyd>
 
-        <slyd id="snappy-code-recipe">
-          <div v-list>
-            <div>
-              <pre class="language-css line-numbers show-language"><code>
-                .card {
-                  transition: transform 250ms ease-out;
-                }
-              </code></pre>
-            </div>
-            <ul>
-              <li>Animate between 200-300ms</li>
-              <li>Elasticy easing</li>
-              <li>Adjust time based on distance</li>
+        <slyd id="snappy-code-duration" two-up-video-right>
+          <div v-list top>
+            <h3 bold uppercase class="brand_color-1 video-header">Duration</h3>
+            <ul tight>
+              <li>between 200-300ms</li>
             </ul>
           </div>
+          <video fit-height src="./videos/dont-fast_flash.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="snappy-code-recipe-gif">
-          <div v-list>
-            <picture cover>
-              <img loading="lazy" src="https://media2.giphy.com/media/l0HlQXlQ3nHyLMvte/giphy.gif?cid=790b76115d1ad277436851795945673b&rid=giphy.gif" alt="">
-            </picture>
+        <slyd id="snappy-code-easing" two-up-video-right>
+          <div v-list top>
+            <h3 bold uppercase class="brand_color-1 video-header">Easing</h3>
+            <ul tight>
+              <li>Elastic</li>
+              <li>ease-out</li>
+              <li>cubic-bezier(0.4, 0.0, 1, 1)</li>
+            </ul>
           </div>
+          <video fit-height src="./videos/easing-emphasized.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="snappy-code-distance" two-stack-video-bottom>
+          <div v-list top>
+            <h3 bold uppercase class="brand_color-1 video-header">Distance</h3>
+            <ul tight>
+              <li>50-200ms for short distances</li>
+              <li>200-350ms for longer distances</li>
+            </ul>
+          </div>
+          <video src="./videos/example-toggle_switch.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
         
         <slyd id="snappy-not-surprising">
           <div v-list text-left>
-            <h3>Nothing surprising here</h3>
+            <h3 bold class="brand_color-1">Good Advice 👍</h3>
+            <p lead>but I want you to <b>think deeper</b></p>
           </div>
         </slyd>
 
@@ -363,7 +372,7 @@
         <slyd id="white-space-&-time">
           <span class="slide-no">1</span>
           <div v-list>
-            <h3>designs need <b>white space</b></h3>
+            <h3 class="text_color-1">designs need <b>white space</b></h3>
             <hr>
             <h1>UX needs <b>time</b></h1>
           </div>
@@ -372,7 +381,7 @@
         <slyd id="how-to-white-space-&-time">
           <div v-list>
             <ol>
-              <li>Waiting vs Active</li>
+              <li>Passive vs Active</li>
               <li>Time is Value</li>
             </ol>
           </div>
@@ -380,9 +389,29 @@
 
         <slyd id="airport-luggage-story">
           <div v-list text-left>
-            <small>story time...</small>
-            <h2>Baggage Claim</h2>
+            <small>Passive <span bold class="brand_color-3">vs</span> Active</small>
+            <h2 bold class="brand_color-1">Baggage Claim UX</h2>
+            <p lead>Story Time</p>
           </div>
+        </slyd>
+
+        <slyd id="passive-vs-active-example" three-up>
+          <video fit-height src="./videos/feedback-indeterminate_circular.mp4" loading="lazy" autoplay muted loop controls></video>
+          <div v-list between>
+            <h4 arrow-left>
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+              Passive
+            </h4>
+            <h4 arrow-right>
+              Active
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+            </h4>
+          </div>
+          <video fit-height src="./videos/feedback-loading_messages.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="add-time-gist">
@@ -758,6 +787,8 @@
         </slyd>
 
       </slyds>
+
+      <!-- SECTION 7 -->
 
       <slyds>
 

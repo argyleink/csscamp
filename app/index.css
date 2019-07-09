@@ -10,8 +10,9 @@
   height: 2em;
   font-size: 2.5vmax;
   border-radius: 50%;
-  color: var(--text-color-2);
-  border: 1px solid var(--text-color-3);
+  color: hsl(calc(var(--hue) * 1.2) 50% 75%);
+  background: hsla(calc(var(--hue) * 1.2), 50%, 75%, 20%);
+  border: 1px solid var(--brand-color-3);
 }
 
 video {
@@ -32,6 +33,29 @@ video {
   gap: 3vmax;
 }
 
+[two-stack-video-bottom] {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 1fr min-content;
+  gap: 3vmax;
+
+  & > :first-child {
+    padding-top: 3vmax;
+  }
+
+  & video {
+    width: 100%;
+  }
+}
+
+[three-up] {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100vh;
+  gap: 1rem;
+}
+
 .icon {
   fill: var(--text-color-2);
   width: 3em;
@@ -44,6 +68,34 @@ video {
   margin-left: 5em;
 }
 
+[arrow-left], [arrow-right] {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-color-1);
+  
+  & > svg {
+    width: 1.5em;
+  }
+}
+
+[arrow-left] {
+  margin-left: -1.75em;
+
+  & > svg {
+    margin-right: 1rem;
+    transform: rotate(90deg);
+  }
+}
+
+[arrow-right] {
+  margin-right: -1.75em;
+
+  & > svg {
+    margin-left: 1rem;
+    transform: rotate(-90deg);
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -51,4 +103,9 @@ video {
   50% {
     transform: translateY(.5rem);
   }
+}
+
+.video-header {
+  transform: none;
+  margin-bottom: 2rem;
 }
