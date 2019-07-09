@@ -372,7 +372,7 @@
         <slyd id="white-space-&-time">
           <span class="slide-no">1</span>
           <div v-list>
-            <h3 class="text_color-1">designs need <b>white space</b></h3>
+            <h3 class="brand_color-3">designs need <b>white space</b></h3>
             <hr>
             <h1>UX needs <b>time</b></h1>
           </div>
@@ -414,7 +414,7 @@
           <video fit-height src="./videos/feedback-loading_messages.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="add-time-gist">
+        <!-- <slyd id="add-time-gist">
           <div v-list>
             <pre class="language-js line-numbers show-language"><code>
               // base animation length
@@ -423,29 +423,22 @@
               // finish animation
             </code></pre>
           </div>
-        </slyd>
+        </slyd> -->
 
         <slyd id="time-is-money">
           <div v-list>
-            <h2>Time <b>is</b> Money</h2>
-            <h3>Buy time with distraction</h3>
-          </div>
-        </slyd>
-
-        <slyd id="money-can-be-wasted">
-          <div v-list>
-            <h2>Money can be wasted...</h2>
-            <progress indeterminate></progress>
+            <h2 class="text_color-1">Time <b>is</b> Money</h2>
+            <h3>Spend wisely</h3>
           </div>
         </slyd>
 
         <slyd id="time-is-money-because">
           <div v-list>
-            <ul>
-              <li>Too fast can mean wrong</li>
-              <li>Too fast can mean cheap</li>
-              <li>Too fast can mean <b>unreal</b></li>
-            </ul>
+            <ol>
+              <li>Too fast can appear wrong</li>
+              <li>Too fast can appear cheap</li>
+              <li>Too fast can appear unreal</li>
+            </ol>
           </div>
         </slyd>
 
@@ -454,14 +447,32 @@
             <small>Story time...</small>
             <ul>
               <li>Intel Comic Director</li>
-              <li>Conde Naste</li>
               <li>Eye Scanner</li>
               <li>QR Code Scanner</li>
             </ul>
           </div>
         </slyd>
 
-        <slyd id="time-is-money-gist">
+        <!-- <slyd id="money-can-be-wasted">
+          <div v-list>
+            <h2>Money can be wasted...</h2>
+            <progress indeterminate></progress>
+          </div>
+        </slyd> -->
+
+        <slyd id="buy-time" two-up-video-right>
+          <div v-list top>
+            <h3 bold uppercase class="brand_color-1 video-header">Buy Time</h3>
+            <ul tight>
+              <li>Distraction</li>
+              <li>Feedback</li>
+              <li>Validation</li>
+            </ul>
+          </div>
+          <video fit-height src="./videos/feedback-juggler_loading.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <!-- <slyd id="time-is-money-gist">
           <div v-list>
             <pre class="language-js line-numbers show-language"><code>
               // fixed animation length
@@ -470,12 +481,12 @@
               // finish animation
             </code></pre>
           </div>
-        </slyd>
+        </slyd> -->
 
         <slyd id="guide-&-follow">
           <span class="slide-no">2</span>
           <div v-list>
-            <h3>designs need to <b>guide</b></h3>
+            <h3 class="brand_color-3">designs need to <b>guide</b></h3>
             <hr>
             <h1>UX needs <br>to <b>follow</b></h1>
           </div>
@@ -490,14 +501,25 @@
           </div>
         </slyd>
 
-        <slyd id="gaming-buttons">
-          <div v-list>
-            <h2>Time Based Feedback</h2>
-            <h3>Tap & Hold UX</h3>
+        <slyd id="gaming-buttons" two-up-video-right>
+          <div v-list top>
+            <h3 bold uppercase class="brand_color-1 video-header">Tap <em class="text_color-2">&</em> Hold</h3>
+            <p lead text-left>Time is a required input parameter for the action to fire</p>
+            <p lead text-left>Deliberation required!</p>
           </div>
+          <video fit-height src="./videos/feedback-longpress2.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="gaming-buttons-snippet">
+        <slyd id="gaming-buttons-moar" two-up-video-right>
+          <div v-list top>
+            <h3 bold uppercase class="brand_color-1 video-header">Less than 1s added</h3>
+            <p lead text-left>Added friction with a tradeoff of user confidence</p>
+            <p lead text-left>Microseconds adding value</p>
+          </div>
+          <video fit-height src="./videos/feedback-longpress_drag.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <!-- <slyd id="gaming-buttons-snippet">
           <div v-list>
             <pre class="language-js line-numbers show-language"><code>
               // user controlled
@@ -505,7 +527,7 @@
               // ux feedback of time
             </code></pre>
           </div>
-        </slyd>
+        </slyd> -->
 
         <slyd id="interruptible">
           <div v-list>
@@ -514,13 +536,35 @@
           </div>
         </slyd>
 
-        <slyd id="interruptible-snippet">
+        <slyd id="interruptible-why">
           <div v-list>
+            <h2 bold class="brand_color-1">Why Interruptible?</h2>
+            <p lead>Since we slowed down the animation speed, a power user may feel frustration because they're prepared for the next action while the UI is transitioning.</p>
+            <p>Let the power user power through</p>
+          </div>
+        </slyd>
+
+        <slyd id="interruptible-snippet" two-up-video-right>
+          <div v-list top style="margin:0 5vmax;">
+            <p lead text-left>CSS Transitions are interruptible by default</p>
+            <pre class="language-css line-numbers show-language" no-depth><code>
+              .menu.in { 
+                transform: translateX(100%); 
+              }
+            </code></pre>
+            <small no-depth>Gestures should always be interruptible as well</small>
+          </div>
+          <video fit-height src="./videos/do-interuptible2.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <!-- <slyd id="interruptible-snippet">
+          <div v-list>
+            <h3 class="text_color-1">CSS Transitions are interruptible by default</h3>
             <pre class="language-js line-numbers show-language"><code>
               // user can butt in and steal control anytime
             </code></pre>
           </div>
-        </slyd>
+        </slyd> -->
 
         <slyd id="speak-&-listen">
           <span class="slide-no">3</span>
@@ -542,28 +586,30 @@
 
         <slyd id="soft-copy">
           <div v-list>
-            <h2>Traditional Approach</h2>
+            <h2 class="text_color-1">Traditional Approach</h2>
             <h3>soft persona in your copy</h3>
           </div>
         </slyd>
 
         <slyd id="soft-copy-snippet">
-          <div h-list>
-            <p>Sharp paragraph</p>
-            <p>Soft paragraph</p>
+          <div side-by-side>
+            <p>Press submit, wait a few seconds, then accept the dialog.</p>
+            <p lead>Pressing submit may take a few seconds while it is processed on the cloud, hold a moment please. Upon completion, review the dialog contents and accept if you're happy with the results.</p>
           </div>
         </slyd>
 
         <slyd id="audibally-soft">
           <div v-list>
-            <h2>Yoga App</h2>
+            <h2 class="text_color-1">Yoga App</h2>
             <h3>audibally soft</h3>
+            <button style="margin-top:5vmax;">Play Clip</button>
           </div>
         </slyd>
 
-        <slyd id="audibally-soft-snippet">
+        <slyd id="audibally-voice-assistants">
           <div v-list>
-            <button>Play Clip</button>
+            <h2 class="brand_color-2">Voice Assistants</h2>
+            <p lead>I can only assume tons of work went into ensuring those voices are soft and fluid</p>
           </div>
         </slyd>
 
@@ -594,14 +640,14 @@
 
         <slyd id="spinner-feedback">
           <div v-list>
-            <h2>Spinners</h2>
+            <h2 class="text_color-1">Spinners</h2>
             <h3>time, message, purpose</h3>
           </div>
         </slyd>
 
         <slyd id="optimistic-interactions">
           <div v-list>
-            <h2 bold>Optimistic Interactions</h2>
+            <h2 bold class="text_color-1">Optimistic Interactions</h2>
             <h3>managed feedback</h3>
           </div>
         </slyd>
@@ -616,7 +662,7 @@
 
         <slyd id="form-autofill">
           <div v-list>
-            <h2 bold>Autofill</h2>
+            <h2 bold class="text_color-1">Autofill</h2>
             <h3>managed feedback</h3>
           </div>
         </slyd>  
@@ -694,7 +740,7 @@
 
         <slyd id="tactic-system-working">
           <div v-list>
-            <h2>Show the system is working</h2>
+            <h2 class="text_color-1">Show the system is working</h2>
           </div>
         </slyd>
 
@@ -708,7 +754,7 @@
 
         <slyd id="tactic-tap-area-padding">
           <div v-list>
-            <h2>Padding on tap areas</h2>
+            <h2 class="text_color-1">Padding on tap areas</h2>
             <h3>forgiving and fault tolerant</h3>
           </div>
         </slyd>
@@ -740,7 +786,7 @@
 
         <slyd id="tactic-interruptible-redirection">
           <div v-list>
-            <h2>Interruptible</h2>
+            <h2 class="text_color-1">Interruptible</h2>
           </div>
         </slyd>
 
@@ -754,7 +800,7 @@
 
         <slyd id="tactic-more-time-stronger-ease">
           <div v-list>
-            <h2>Increase Duration</h2>
+            <h2 class="text_color-1">Increase Duration</h2>
             <h3>with stronger easing</h3>
           </div>
         </slyd>
@@ -771,7 +817,7 @@
 
         <slyd id="tactic-area-context">
           <div v-list>
-            <h2>Duration += Distance</h2>
+            <h2 class="text_color-1">Duration += Distance</h2>
             <h3>short distance :: short duration</h3>
           </div>
         </slyd>
@@ -826,6 +872,7 @@
         <slyd id="end">
           <div v-list>
             <h1>Thank You</h1>
+            <h1>💀🤘</h1>
           </div>
         </slyd>
 

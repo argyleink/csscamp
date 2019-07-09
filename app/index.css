@@ -25,6 +25,14 @@ video {
   }
 }
 
+[side-by-side] {
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  gap: 5vmax;
+  padding: 0 5vmax;
+}
+
 [two-up-video-right] {
   display: grid;
   grid-auto-flow: column;
@@ -75,24 +83,26 @@ video {
   
   & > svg {
     width: 1.5em;
+    animation: point 2s ease-in-out infinite;
   }
 }
 
 [arrow-left] {
+  --rotate: 90deg;
   margin-left: -1.75em;
 
   & > svg {
     margin-right: 1rem;
-    transform: rotate(90deg);
   }
 }
 
 [arrow-right] {
+  --rotate: -90deg;
   margin-right: -1.75em;
 
   & > svg {
     margin-left: 1rem;
-    transform: rotate(-90deg);
+    animation-delay: 1s;
   }
 }
 
@@ -103,6 +113,19 @@ video {
   50% {
     transform: translateY(.5rem);
   }
+}
+
+@keyframes point {
+  0%, 100% {
+    transform: translateY(0) rotateZ(var(--rotate));
+  }
+  50% {
+    transform: translateX(.5rem) rotateZ(var(--rotate));
+  }
+}
+
+[no-depth] {
+  transform: none;
 }
 
 .video-header {
