@@ -1038,7 +1038,7 @@
         <slyd id="tactic-area-context" pull-left>
           <div h-list>
             <div text-right>
-              <p capitalize>Duration += Distance</p>
+              <p capitalize>Duration *= Distance</p>
               <p lead>Long animations over short distances waste user time</p>
               <small>Calm contextual duration</small>
             </div>
@@ -1083,11 +1083,59 @@
           <video fit-height src="./videos/contrast-scale_fast_slow.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="tactic-orchestration">
-          <div v-list>
-            <h2 class="text_color-1">Orchestration</h2>
-            <h3>focus :: context</h3>
+        <slyd id="tactic-orchestration" pull-left>
+          <div h-list>
+            <div text-right>
+              <p capitalize>Orchestration</p>
+              <p lead>Longer total durations can feel shorter with meaningful motion choreography</p>
+              <small>Orchestrated UIs feel safer</small>
+            </div>
+            <div>
+              <pre class="language-css line-numbers show-language"><code>
+                [animation="in"] > * {
+                  --delay: 0;
+                  --base-duration: .8s;
+                  --distance-multiplier: 1;
+                  --strong-ease: cubic-bezier(.13,.01,.1,1);
+
+                  transition-property: transform;
+                  transition-delay: var(--delay);
+                  transition-timing-function: 
+                    var(--strong-ease);
+                  transition-duration: 
+                    calc(
+                      var(--base-duration)  
+                      * var(--distance-multiplier)
+                    );
+                }
+              </code></pre>
+            </div>
           </div>
+        </slyd>
+
+        <slyd id="tactic-orchestration-dont" two-up-video-right>
+          <div v-list>
+            <h3>Don't 👎</h3>
+          </div>
+          <video fit-height src="./videos/dont-orchestrate_badly.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-orchestration-delay" two-stack-video-bottom>
+          <div v-list top>
+            <p>Delay with intent</p>
+          </div>
+          <video src="./videos/orchestrate-focus.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-orchestration-stagger" two-up-video-right>
+          <div v-list>
+            <h3 class="text_color-1">Stagger with intent</h3>
+          </div>
+          <video fit-height src="./videos/orchestration-stagger_time.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-orchestration-do">
+          <video fit-height src="./videos/do-orchestrate.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
       </slyds>
@@ -1096,8 +1144,16 @@
 
       <slyds>
 
+        <slyd id="conclusion-recap">
+          <div v-list>
+            <h1>Wrap Up</h1>
+            <h3>Time to conclude our time about time</h3>
+          </div>
+        </slyd>
+
         <slyd id="strategies-recap">
           <div v-list>
+            <h2 class="brand_color-1">Strategies</h2>
             <ol>
               <li>Designs need white space<br>UX needs time</li>
               <li>Designs need to guide<br>UX needs to follow</li>
@@ -1110,22 +1166,47 @@
 
         <slyd id="tactics-recap">
           <div v-list>
+            <h2 class="brand_color-2">Tactics</h2>
             <ol>
               <li>UI Feedback</li>
-              <li>Forgiving hit areas</li>
               <li>Faster in than out</li>
               <li>Be interruptible</li>
-              <li>Increase duration and strengthen easing</li>
-              <li>Duration += Distance</li>
+              <li>Increase duration & strengthen easing</li>
+              <li>Duration *= Distance</li>
+              <li>Orchestrate</li>
             </ol>
           </div>
         </slyd>
 
-        <!-- <slyd id="experiment">
+        <slyd id="takeaway-assertions">
           <div v-list>
-            <h1>Slow down the UI around you, see what the 1-2 seconds slow does to you</h1>
+            <h2 class="brand_color-3">Assertions</h2>
+            <ol>
+              <li>Well orchestrated "slow" apps can earn trust</li>
+              <li>Slow paces produce less anxiety</li>
+              <li>Apps feel tense, release some tension</li>
+              <li>UIs waste lots of user time</li>
+              <li>Instant completion feels cheap</li>
+              <li>Speed can be an detriment</li>
+            </ol>
           </div>
-        </slyd> -->
+        </slyd>
+
+        <slyd id="talk-request">
+          <div v-list>
+            <p lead>Slow down the UI around you, see what the 1-2 seconds slower does to you</p>
+          </div>
+        </slyd>
+
+        <slyd id="tldr">
+          <div v-list>
+            <blockquote>
+              <p>Contribute to sustainable UX</p>
+              <p>Increase duration, stagger more, soften copy, & release tension</p>
+              <footer>argyleink</footer>
+            </blockquote>
+          </div>
+        </slyd>
 
         <slyd id="end">
           <div v-list>
