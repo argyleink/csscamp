@@ -1,5 +1,11 @@
 @import 'https://slyd.netlify.com/bundle.css';
 
+slyd {
+  background-image: 
+    radial-gradient(circle, hsla(0,0%,0%,var(--darkness)) 0%, hsla(0,0%,0%,var(--darkness)) 100%),
+    var(--image);
+}
+
 .slide-no {
   position: absolute;
   top: 2rem;
@@ -33,6 +39,12 @@ video {
   padding: 0 5vmax;
 }
 
+[split] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100vh;
+}
+
 [two-up-video-right] {
   display: grid;
   grid-auto-flow: column;
@@ -62,6 +74,9 @@ video {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100vh;
   gap: 1rem;
+
+  & > :first-child { justify-self: flex-start; }
+  & > :last-child { justify-self: flex-end; }
 }
 
 .icon {

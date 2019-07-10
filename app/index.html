@@ -619,60 +619,120 @@
             <h3 class="brand_color-3">designs need to <b>report</b></h3>
             <hr>
             <h1>UX needs to<br>
-              <b>manage</b></h1>
+              <b>respond</b></h1>
           </div>
         </slyd>
 
-        <slyd id="how-to-feedback">
-          <div v-list>
-            <ol>
-              <li>Feedback</li>
-              <li>Autofill</li>
-            </ol>
+        <slyd id="feedback-wat" three-up>
+          <video fit-height src="./videos/mass-cart.mp4" loading="lazy" autoplay muted loop controls></video>
+          <div v-list between>
+            <h4 arrow-left>
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+              Respond
+            </h4>
+            <h4 class="text_color-1">Animate</h4>
+            <h4 highlight>Idle</h4>
+            <h4 arrow-right>
+              Load
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+            </h4>
           </div>
+          <video fit-height src="./videos/feedback-dial.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="spinners">
+        <slyd id="feedback-switches" style="--image: url(./images/feedback-switches_states.png); --darkness: 0%;"></slyd>
+
+        <slyd id="feedback-checkbox-effect" two-up-video-right>
           <div v-list>
-            <h!>Spinners!</h!>
+            <p lead>big feedback</p>
+          </div>
+          <video fit-height src="./videos/feedback-checkbox_highlight.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="peek-feedback" two-up-video-right>
+          <div v-list top>
+            <h3 bold uppercase class="brand_color-1 video-header">Quick overview of:</h3>
+            <ul tight>
+              <li>Respond</li>
+              <li>Animate</li>
+            </ul>
+          </div>
+          <video fit-height src="./videos/feedback-peek.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="feedback-idle-state">
+          <div v-list>
+            <h1>idle</h1>
+            <p lead>we spend a lot of time here</p>
           </div>
         </slyd>
 
         <slyd id="spinner-feedback">
           <div v-list>
-            <h2 class="text_color-1">Spinners</h2>
-            <h3>time, message, purpose</h3>
+            <h1>Spinners</h1>
           </div>
+        </slyd>
+
+        <slyd id="spinner-kinds" two-stack-video-bottom>
+          <div v-list top>
+            <h3 bold uppercase class="brand_color-1 video-header">Kinds</h3>
+            <ol tight>
+              <li>Determinate</li>
+              <li>Indeterminate</li>
+            </ol>
+          </div>
+          <video src="./videos/contrast-determinate_vs_indeterminate.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="spinners-dont" two-up-video-right>
+          <div v-list>
+            <p lead>don't 👎</p>
+          </div>
+          <video fit-height src="./videos/dont-feedback_too_many_spinners.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="spinners-do" three-up>
+          <video fit-height src="./videos/feedback-juggler_loading.mp4" loading="lazy" autoplay muted loop controls></video>
+          <div v-list>
+            <p lead>do 👍</p>
+          </div>
+          <video fit-height src="./videos/feedback-ptr_async_spinner.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="indeterminate-switch" two-stack-video-bottom>
+          <div v-list top>
+            <p bold class="brand_color-3">Indeterminate Switch</p>
+          </div>
+          <video src="./videos/feedback-switch_indeterminate.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="optimistic-interactions">
           <div v-list>
             <h2 bold class="text_color-1">Optimistic Interactions</h2>
-            <h3>managed feedback</h3>
+            <h3>orchestrated feedback</h3>
           </div>
         </slyd>
 
-        <slyd id="optimistic-interactions-example">
-          <div v-list>
-            <picture cover>
-              <img loading="lazy" src="https://media2.giphy.com/media/l0HlQXlQ3nHyLMvte/giphy.gif?cid=790b76115d1ad277436851795945673b&rid=giphy.gif" alt="">
-            </picture>
-          </div>
+        <slyd id="optimistic-interactions-example" two-stack-video-bottom>
+          <p lead style="margin:0;">
+            <span bold>UI Promise</span><br>
+            to <span italic>not waste</span> your time
+          </p>
+          <video src="./videos/do-interuptible.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="form-autofill">
-          <div v-list>
-            <h2 bold class="text_color-1">Autofill</h2>
-            <h3>managed feedback</h3>
-          </div>
-        </slyd>  
+        <slyd id="optimistic-controls" two-up-video-right>
+          <p lead >Optimisic controls</p>
+          <video fit-height src="./videos/speed-small_fast.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
 
-        <slyd id="form-autofill-demo">
-          <div v-list>
-            <picture cover>
-              <img loading="lazy" src="https://media2.giphy.com/media/l0HlQXlQ3nHyLMvte/giphy.gif?cid=790b76115d1ad277436851795945673b&rid=giphy.gif" alt="">
-            </picture>
-          </div>
+        <slyd id="optimistic-tabs" two-up-video-right>
+          <p lead >Optimisic tabs</p>
+          <video fit-height src="./videos/do-consistent.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="ui-mass">
@@ -685,12 +745,36 @@
           </div>
         </slyd>
 
-        <slyd id="ui-mass-demo">
+        <slyd id="ui-mass-polish">
           <div v-list>
-            <picture cover>
-              <img loading="lazy" src="https://media2.giphy.com/media/l0HlQXlQ3nHyLMvte/giphy.gif?cid=790b76115d1ad277436851795945673b&rid=giphy.gif" alt="">
-            </picture>
+            <p lead>Why does an app or OS feel so different if mass is present?</p>
           </div>
+        </slyd>
+
+        <slyd id="mass-heavy" two-up-video-right style="align-items:flex-end;justify-items:flex-end;">
+          <div v-list style="margin:1rem;">
+            <h4 arrow-right no-depth>
+              Heavy Mass
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+            </h4>
+          </div>
+          <video fit-height src="./videos/mass-cart.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="mass-group" two-up-video-right>
+          <div v-list>
+            <p lead>Mass sharing space</p>
+          </div>
+          <video fit-height src="./videos/mass-grouping_relations.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="mass-dont" two-up-video-right>
+          <div v-list>
+            <p lead>don't put me in a spider web</p>
+          </div>
+          <video fit-height src="./videos/mass-dont.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="calming-ui-strategies-recap">
