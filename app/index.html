@@ -593,8 +593,14 @@
 
         <slyd id="soft-copy-snippet">
           <div side-by-side>
-            <p>Press submit, wait a few seconds, then accept the dialog.</p>
-            <p lead>Pressing submit may take a few seconds while it is processed on the cloud, hold a moment please. Upon completion, review the dialog contents and accept if you're happy with the results.</p>
+            <div>
+              <p>Sharp:</p>
+              <p lead>You must register<br>before you can vote</p>
+            </div>
+            <div>
+              <p>Soft:</p>
+              <p lead>Register to vote</p>
+            </div>
           </div>
         </slyd>
 
@@ -850,11 +856,11 @@
           <video fit-height src="./videos/feedback-longpress2.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="tactic-system-working" pull-left>
+        <slyd id="tactic-system-working">
           <div h-list>
             <div text-right>
               <p capitalize>Show the system state</p>
-              <p lead></p>
+              <p lead>Communicate early and often,<br>as if your UI was a sales person</p>
               <!-- <p lead>Optimistically do small tasks.</p> -->
               <!-- <p lead>Indeterminate if >= .5s</p>
               <p lead>Distract if >= 1.5s</p> -->
@@ -886,84 +892,195 @@
           <video fit-height src="./videos/example-sync_loading.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="tactic-tap-area-padding">
-          <div v-list>
-            <h2 class="text_color-1">Padding on tap areas</h2>
-            <h3>forgiving and fault tolerant</h3>
-          </div>
-        </slyd>
-
-        <slyd id="tactic-tap-area-padding-snippet">
-          <div v-list>
-            <pre class="language-css line-numbers show-language"><code>
-              button {
-                padding: .5rem; 
-              }
-            </code></pre>
-          </div>
-        </slyd>
-
         <slyd id="tactic-animation-directionality">
-          <div v-list>
-            <h2>More time to deceleration than acceleration</h2>
+          <div h-list>
+            <div text-right>
+              <p capitalize>Animation Directionality</p>
+              <p lead>UIElements should enter slower<br>than they exit</p>
+              <p lead>More time for the new,<br>less time for the old</p>
+              <small>Bring focus to actionable UI</small>
+            </div>
+            <div>
+              <pre class="language-css line-numbers show-language"><code>
+                :host[animation="in"] {
+                  transition-duration: 500ms;
+                }
+
+                :host[animation="out"] {
+                  transition-duration: 400ms;
+                }
+              </code></pre>
+            </div>
           </div>
         </slyd>
 
-        <slyd id="tactic-animation-directionality-snippet">
-          <div v-list>
-            <pre class="language-js line-numbers show-language"><code>
-              // in animation
-              // out animation
-            </code></pre>
+        <slyd id="tactic-animation-directionality-demo" two-up-video-right>
+          <pre class="language-css line-numbers show-language"><code>
+            /* Gif Uses */
+            :host[animation="in"] {
+              transition-duration: 300ms;
+            }
+
+            :host[animation="out"] {
+              transition-duration: 250ms;
+            }
+
+            /* Calmer */
+            :host[animation="in"] {
+              transition-duration: 500ms;
+            }
+
+            :host[animation="out"] {
+              transition-duration: 400ms;
+            }
+          </code></pre>
+          <video fit-height src="./videos/easing-in_slower_than_out.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-interruptible-redirection" pull-left>
+          <div h-list>
+            <div text-right>
+              <p capitalize>Interruptible Motion</p>
+              <p lead>UI promises to never block the user. Users will drive & move at their own pace</p>
+              <small>User calmed by their control</small>
+            </div>
+            <div>
+              <pre class="language-css line-numbers show-language"><code>
+                :host {
+                  transition: transform .5s ease;
+                }
+
+                :host[animation="in"] {
+                  transform: translateX(0);
+                  transition-timing-function: 
+                    cubic-bezier(0.0, 0.0, 0.2, 1);
+                }
+
+                :host[animation="out"] {
+                  transform: translateX(100%);
+                  transition-timing-function: 
+                    cubic-bezier(0.4, 0.0, 1, 1);
+                }
+              </code></pre>
+            </div>
           </div>
         </slyd>
 
-        <slyd id="tactic-interruptible-redirection">
+        <slyd id="tactic-interruptible-redirection-dont" two-up-video-right>
           <div v-list>
-            <h2 class="text_color-1">Interruptible</h2>
+            <h3>Don't 👎</h3>
+          </div>
+          <video fit-height src="./videos/dont-user_not_driving.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-interruptible-redirection-dont" two-up-video-right>
+          <div v-list>
+            <h3>Do 👍</h3>
+          </div>
+          <video fit-height src="./videos/do-interuptible2.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-more-time-stronger-ease" pull-left>
+          <div h-list>
+            <div text-right>
+              <p capitalize>Increase Duration</p>
+              <p lead>Give the animation more time but with exaggerated easing to soften the tension</p>
+              <small>Calm down UI enertia</small>
+            </div>
+            <div>
+              <pre class="language-css line-numbers show-language"><code>
+                /* Industry Standard */
+                :host[animation="in"] {
+                  transition-duration: .3s;
+                  transition-timing-function: 
+                    ease-out;
+                }
+
+                /* Calmer */
+                :host[animation="in"] {
+                  transition-duration: ~1s;
+                  transition-timing-function: 
+                    cubic-bezier(.13, .01, 0.1, 1);
+                }
+              </code></pre>
+            </div>
           </div>
         </slyd>
 
-        <slyd id="tactic-interruptible-redirection-snippet">
+        <slyd id="tactic-more-time-stronger-ease-compare-subtle" two-up-video-right>
           <div v-list>
-            <pre class="language-js line-numbers show-language"><code>
-              // transitions are interruptible by default
-            </code></pre>
+            <h3 class="text_color-1">200ms vs 350ms</h3>
+          </div>
+          <video fit-height src="./videos/contrast-easing_250_vs_350.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-more-time-stronger-ease-compare" two-up-video-right>
+          <div v-list>
+            <h3 class="text_color-1">115ms vs 550ms</h3>
+          </div>
+          <video fit-height src="./videos/contrast-easing_150_vs_550.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-more-time-stronger-ease-dont" two-up-video-right>
+          <div v-list>
+            <h3>Don't 👎</h3>
+          </div>
+          <video fit-height src="./videos/dont-hyper_elastic.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-more-time-stronger-ease-do" two-up-video-right>
+          <div v-list>
+            <h3>Do 👍</h3>
+          </div>
+          <video fit-height src="./videos/do-easing.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-area-context" pull-left>
+          <div h-list>
+            <div text-right>
+              <p capitalize>Duration += Distance</p>
+              <p lead>Long animations over short distances waste user time</p>
+              <small>Calm contextual duration</small>
+            </div>
+            <div>
+              <pre class="language-css line-numbers show-language"><code>
+                :host[animation="in"] {
+                  --base-duration: .5s;
+                  --distance-multiplier: 1;
+
+                  /* use js to set the multiplier */
+                  /* > 1 for longer */
+                  /* < 1 for shorter */
+                  transition-duration: 
+                    calc(
+                      var(--base-duration)  
+                      * var(--distance-multiplier)
+                    );
+                }
+              </code></pre>
+            </div>
           </div>
         </slyd>
 
-        <slyd id="tactic-more-time-stronger-ease">
+        <slyd id="tactic-area-context-short" two-up-video-right>
           <div v-list>
-            <h2 class="text_color-1">Increase Duration</h2>
-            <h3>with stronger easing</h3>
+            <h3 class="text_color-1">Short</h3>
           </div>
+          <video fit-height src="./videos/speed-small_fast.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="tactic-more-time-stronger-ease-snippet">
+        <slyd id="tactic-area-context-medium" two-up-video-right>
           <div v-list>
-            <pre class="language-js line-numbers show-language"><code>
-              // side by side
-              // one has 200ms duration with regular ease
-              // one has 500ms duration with stronger ease
-            </code></pre>
+            <h3 class="text_color-1">Medium</h3>
           </div>
+          <video fit-height src="./videos/feedback-down_pause.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="tactic-area-context">
+        <slyd id="tactic-area-context-far" two-up-video-right>
           <div v-list>
-            <h2 class="text_color-1">Duration += Distance</h2>
-            <h3>short distance :: short duration</h3>
+            <h3 class="text_color-1">Long</h3>
           </div>
-        </slyd>
-
-        <slyd id="tactic-area-context-snippet">
-          <div v-list>
-            <pre class="language-js line-numbers show-language"><code>
-              // small
-              // medium
-              // large
-            </code></pre>
-          </div>
+          <video fit-height src="./videos/contrast-scale_fast_slow.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="tactic-orchestration">
