@@ -808,32 +808,82 @@
           </div>
         </slyd>
 
-        <slyd id="tactic-immediate-feedback">
-          <div v-list>
-            <h2>Immediate feedback on hover/touchdown</h2>
+        <slyd id="tactic-immediate-feedback" pull-left>
+          <div h-list>
+            <div text-right>
+              <p capitalize>Immediate UI Feedback</p>
+              <p lead>Providing an instant visual answer to a user UI inquiry will keep them calm.</p>
+              <small>The UI is alive</small>
+            </div>
+            <div>
+              <pre class="language-css line-numbers show-language"><code>
+                button {
+                  ...
+                  &:focus {}
+                  &:focus-within {}
+                  &:hover {}
+                  &:active {}
+
+                  &:disabled:focus {}
+                  &:disabled:hover {}
+                  ...
+                }
+              </code></pre>
+            </div>
           </div>
         </slyd>
 
-        <slyd id="tactic-immediate-feedback-snippet">
-          <div v-list>
-            <pre class="language-js line-numbers show-language"><code>
-              // :active, :focus, :hover
-            </code></pre>
+        <slyd id="tactic-immediate-feedback-demo" two-up-video-right>
+          <pre class="language-css line-numbers show-language"><code>
+            :host {
+              ...
+              &:focus {}
+              &:focus-within {}
+              &:hover {}
+              &:active {}
+
+              &:disabled:focus {}
+              &:disabled:hover {}
+              ...
+            }
+          </code></pre>
+          <video fit-height src="./videos/feedback-longpress2.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="tactic-system-working" pull-left>
+          <div h-list>
+            <div text-right>
+              <p capitalize>Show the system state</p>
+              <p lead></p>
+              <!-- <p lead>Optimistically do small tasks.</p> -->
+              <!-- <p lead>Indeterminate if >= .5s</p>
+              <p lead>Distract if >= 1.5s</p> -->
+              <!-- <p lead>If work is perceptively valuable, animate >= 5s.</p> -->
+              <small>The UI is doing work</small>
+            </div>
+            <div>
+              <pre class="language-css line-numbers show-language"><code>
+                @keyframes float-forever {
+                  0%, 100% { 
+                    transform: translateY(0); 
+                  }
+                  50% { 
+                    transform: translateY(.25rem); 
+                  }
+                }
+
+                :host[sending] {
+                  animation: 
+                    float-forever .2s 
+                    ease-in-out infinite;
+                }
+              </code></pre>
+            </div>
           </div>
         </slyd>
 
-        <slyd id="tactic-system-working">
-          <div v-list>
-            <h2 class="text_color-1">Show the system is working</h2>
-          </div>
-        </slyd>
-
-        <slyd id="tactic-system-working-snippet">
-          <div v-list>
-            <pre class="language-js line-numbers show-language"><code>
-              // spinner?
-            </code></pre>
-          </div>
+        <slyd id="tactic-system-working-demo">
+          <video fit-height src="./videos/example-sync_loading.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="tactic-tap-area-padding">
@@ -913,6 +963,13 @@
               // medium
               // large
             </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="tactic-orchestration">
+          <div v-list>
+            <h2 class="text_color-1">Orchestration</h2>
+            <h3>focus :: context</h3>
           </div>
         </slyd>
 

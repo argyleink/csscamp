@@ -4,6 +4,10 @@ slyd {
   background-image: 
     radial-gradient(circle, hsla(0,0%,0%,var(--darkness)) 0%, hsla(0,0%,0%,var(--darkness)) 100%),
     var(--image);
+
+  &[pull-left] {
+    justify-items: flex-start;
+  }
 }
 
 .slide-no {
