@@ -38,6 +38,7 @@ video {
 
   &[fit-height] {
     height: 100%;
+    width: auto;
   }
 }
 
@@ -75,6 +76,7 @@ video {
 
   & video {
     width: 100%;
+    height: auto;
   }
 }
 

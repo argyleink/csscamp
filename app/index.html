@@ -21,11 +21,9 @@
 
       <slyds>
 
-        <slyd id="beginning">
-          <div v-list>
-            <h1>It's Too Fast</h1>
-            <h3>Boost UX by <span highlight>adding time</span></h3>
-          </div>
+        <slyd id="beginning" centered v-list>
+          <h1>It's Too Fast</h1>
+          <h3 class="text_color-2">Boost UX by <span highlight>adding time</span></h3>
         </slyd>
 
         <slyd id="problem-statement" two-up-video-right>
@@ -42,11 +40,7 @@
           <div v-list>
             <h2 uppercase serif class="brand_color-1">Quest</h2>
             <p lead text-left>Compel a speed addicted community to replace techniques that create anxiety with techniques that relieve anxiety.</p>
-            <p>
-              <small>in other words..</small>
-              <br>
-              (pace over speed)
-            </p>
+            <p>(pace over speed)</p>
           </div>
         </slyd>
 
@@ -64,6 +58,17 @@
           </div>
         </slyd>
 
+        <slyd id="prepare" centered v-list>
+          <h2>Prepare For:</h2>
+          <ol>
+            <li>Earth UX</li>
+            <li>2019 Fast Apps</li>
+            <li>2019 Snappy CSS</li>
+            <li>Calm Strategies</li>
+            <li>Calm Tactics</li>
+          </ol>
+        </slyd>
+
       </slyds>
 
       <!-- SECTION 2 -->
@@ -73,7 +78,7 @@
         <slyd id="earth-ux">
           <div v-list>
             <h1>Earth Life UX</h1>
-            <h3>Where you spend most your day</h3>
+            <h3 class="text_color-2">Where you spend most your day</h3>
           </div>
         </slyd>
 
@@ -317,6 +322,10 @@
           </div>
         </slyd>
 
+        <slyd id="una-poll" centered v-list>
+          <img loading="lazy" src="./images/una-poll.png" alt="twitter poll showing 0.26s-0.5s as most popular">
+        </slyd>
+
         <slyd id="snappy-code-duration" two-up-video-right>
           <div v-list top>
             <h3 bold uppercase class="brand_color-1 video-header">Duration</h3>
@@ -553,7 +562,7 @@
                 transform: translateX(100%); 
               }
             </code></pre>
-            <small no-depth>Gestures should always be interruptible as well</small>
+            <h4 text-left no-depth>Gestures should always be interruptible</h4>
           </div>
           <video fit-height src="./videos/do-interuptible2.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
@@ -608,7 +617,7 @@
         <slyd id="audibally-soft">
           <div v-list>
             <h2 class="text_color-1">Yoga App</h2>
-            <h3>audibally soft</h3>
+            <h3 push-bottom="1">audibally soft</h3>
             <audio src="./videos/yoga-calm.m4a" controls></audio>
           </div>
         </slyd>
@@ -810,7 +819,7 @@
         
         <slyd id="calming-ui-tactics">
           <div v-list text-left>
-            <small>Tactics for a</small>
+            <h4>Tactics for a</h4>
             <h1>Calming UI</h1>
           </div>
         </slyd>
@@ -820,7 +829,7 @@
             <div text-right>
               <p capitalize>Immediate UI Feedback</p>
               <p lead>Providing an instant visual answer to a user UI inquiry will keep them calm.</p>
-              <small>The UI is alive</small>
+              <h4>The UI is alive</h4>
             </div>
             <div>
               <pre class="language-css line-numbers show-language"><code>
@@ -866,7 +875,7 @@
               <!-- <p lead>Indeterminate if >= .5s</p>
               <p lead>Distract if >= 1.5s</p> -->
               <!-- <p lead>If work is perceptively valuable, animate >= 5s.</p> -->
-              <small>The UI is doing work</small>
+              <h4>The UI is doing work</h4>
             </div>
             <div>
               <pre class="language-css line-numbers show-language"><code>
@@ -899,7 +908,7 @@
               <p capitalize>Animation Directionality</p>
               <p lead>UIElements should enter slower<br>than they exit</p>
               <p lead>More time for the new,<br>less time for the old</p>
-              <small>Bring focus to actionable UI</small>
+              <h4>Bring focus to actionable UI</h4>
             </div>
             <div>
               <pre class="language-css line-numbers show-language"><code>
@@ -943,7 +952,7 @@
             <div text-right>
               <p capitalize>Interruptible Motion</p>
               <p lead>UI promises to never block the user. Users will drive & move at their own pace</p>
-              <small>User calmed by their control</small>
+              <h4>User calmed by their control</h4>
             </div>
             <div>
               <pre class="language-css line-numbers show-language"><code>
@@ -969,16 +978,20 @@
 
         <slyd id="tactic-interruptible-redirection-dont" two-up-video-right>
           <div v-list>
-            <h3>Don't 👎</h3>
+            <h3 class="text_color-1">Don't 👎</h3>
           </div>
           <video fit-height src="./videos/dont-user_not_driving.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
-        <slyd id="tactic-interruptible-redirection-dont" two-up-video-right>
+        <slyd id="tactic-interruptible-redirection-do" two-up-video-right>
           <div v-list>
-            <h3>Do 👍</h3>
+            <h3 class="text_color-1">Do 👍</h3>
           </div>
           <video fit-height src="./videos/do-interuptible2.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+        <slyd id="reduced-motion-first" centered v-list>
+          <img loading="lazy" src="./images/reduced-motion-first.jpeg" alt="twitter poll showing 0.26s-0.5s as most popular">
         </slyd>
 
         <slyd id="tactic-more-time-stronger-ease" pull-left>
@@ -986,7 +999,7 @@
             <div text-right>
               <p capitalize>Increase Duration</p>
               <p lead>Give the animation more time but with exaggerated easing to soften the tension</p>
-              <small>Calm down UI enertia</small>
+              <h4>Calm down UI enertia</h4>
             </div>
             <div>
               <pre class="language-css line-numbers show-language"><code>
@@ -1024,14 +1037,14 @@
 
         <slyd id="tactic-more-time-stronger-ease-dont" two-up-video-right>
           <div v-list>
-            <h3>Don't 👎</h3>
+            <h3 class="text_color-1">Don't 👎</h3>
           </div>
           <video fit-height src="./videos/dont-hyper_elastic.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="tactic-more-time-stronger-ease-do" two-up-video-right>
           <div v-list>
-            <h3>Do 👍</h3>
+            <h3 class="text_color-1">Do 👍</h3>
           </div>
           <video fit-height src="./videos/do-easing.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
@@ -1041,7 +1054,7 @@
             <div text-right>
               <p capitalize>Duration *= Distance</p>
               <p lead>Long animations over short distances waste user time</p>
-              <small>Calm contextual duration</small>
+              <h4>Calm contextual duration</h4>
             </div>
             <div>
               <pre class="language-css line-numbers show-language"><code>
@@ -1089,7 +1102,7 @@
             <div text-right>
               <p capitalize>Orchestration</p>
               <p lead>Longer total durations can feel shorter with meaningful motion choreography</p>
-              <small>Orchestrated UIs feel safer</small>
+              <h4>Orchestrated UIs feel safer</h4>
             </div>
             <div>
               <pre class="language-css line-numbers show-language"><code>
@@ -1116,7 +1129,7 @@
 
         <slyd id="tactic-orchestration-dont" two-up-video-right>
           <div v-list>
-            <h3>Don't 👎</h3>
+            <h3 class="text_color-1">Don't 👎</h3>
           </div>
           <video fit-height src="./videos/dont-orchestrate_badly.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
@@ -1148,7 +1161,7 @@
         <slyd id="recap">
           <div v-list>
             <h1>Wrap Up</h1>
-            <h3>Time to conclude our time about time</h3>
+            <h3 class="text_color-2">Time to conclude our time about time</h3>
           </div>
         </slyd>
 
@@ -1172,6 +1185,7 @@
               <li>UI Feedback</li>
               <li>Faster in than out</li>
               <li>Be interruptible</li>
+              <li>Be optional</li>
               <li>Increase duration & strengthen easing</li>
               <li>Duration *= Distance</li>
               <li>Orchestrate</li>
@@ -1188,7 +1202,7 @@
               <li>Apps feel tense, release some tension</li>
               <li>UIs waste lots of user time</li>
               <li>Instant completion feels cheap</li>
-              <li>Speed can be an detriment</li>
+              <li>Try to model app UI after sustainable Earth UI</li>
             </ol>
           </div>
         </slyd>
@@ -1203,7 +1217,7 @@
           <div v-list>
             <blockquote>
               <p>Contribute to sustainable UX</p>
-              <p>increase duration, stagger more, soften tone, & release tension</p>
+              <p>optional & interruptible motion, increase duration, stagger more, soften tone, & release tension</p>
               <footer>argyleink</footer>
             </blockquote>
           </div>
